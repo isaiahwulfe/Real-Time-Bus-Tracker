@@ -44,7 +44,7 @@ var map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/streets-v11',
   center: [-112.074036, 33.448376],
-  zoom: 14
+  zoom: 12
 });
 
 const nav = new mapboxgl.NavigationControl();
@@ -68,7 +68,7 @@ async function run(){
   const latLong = [];
   latLong.push(long, lat);
   marker.setLngLat(latLong);
-  mapboxgl.center = latLong;
+  map.jumpTo({'center': latLong, 'zoom': 17});
 	console.log(new Date());
 	console.log(locations);
 	// timer

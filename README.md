@@ -1,4 +1,4 @@
-# <div align="center">Real-Time-Bus-Tracker</div>
+# <div align="center">Real Time Bus Tracker</div>
 
 > - Tracks the movement of a Valley Metro Bus driving in Phoenix, Arizona. 
 >   - Refresh rate of 15 seconds

@@ -16,7 +16,7 @@
 > 2. Open index.html in your browser
 > 3. The map will automatically center on the heart of Phoenix
 > 4. Click one of four buttons and track the movement of that bus
->   1. Map will automatically zoom in and focus on selected bus
+>       1. Map will automatically zoom in and focus on selected bus
 > 5. Click another button to switch to another bus at anytime
 
 ***

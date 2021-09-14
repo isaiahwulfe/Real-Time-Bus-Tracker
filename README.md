@@ -10,4 +10,10 @@
 > - The bus marker is bus.png
 > - Map stays centered on the bus
 
+### <div align="center">Instructions</div>
+1. Fork and clone this repo
+2. Open index.html
+3. The map will automatically focus in on and follow the bus
+4. View the console to see the longitude and latitude of the bus
+
 ***

@@ -8,12 +8,15 @@
 ### <div align="center">Features</div>
 > - Location updates every 15 seconds
 > - The bus marker is bus.png
-> - Map stays centered on the bus
+> - Map stays centered on the bus after you select it
+> - Switch between busses
 
 ### <div align="center">Instructions</div>
 > 1. Fork and clone this repo
-> 2. Open index.html
-> 3. The map will automatically focus in on and follow the bus
-> 4. View the console to see the longitude and latitude of the bus
+> 2. Open index.html in your browser
+> 3. The map will automatically center on the heart of Phoenix
+> 4. Click one of four buttons and track the movement of that bus
+>   - Map will automatically zoom in and focus on selected bus
+> 5. Click another button to switch to another bus at anytime
 
 ***

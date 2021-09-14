@@ -1,4 +1,8 @@
+// Access Token
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiZXJpY3NlYW5qb2huc29uIiwiYSI6ImNrdGVxZTBiYjAwMGEyb3J6NDl2bTVzdHIifQ.5N-sZ2hG-e_MdqaoCCws5g'
+
+// Render Map
 
 var map = new mapboxgl.Map({
   container: 'map',
@@ -7,8 +11,12 @@ var map = new mapboxgl.Map({
   zoom: 12
 });
 
+// Zoom and Compass
+
 const nav = new mapboxgl.NavigationControl();
-  map.addControl(nav, 'top-left');
+  map.addControl(nav, 'top-right');
+
+// Create Marker
 
 const el = document.createElement('div');
   el.className = 'marker';
@@ -17,22 +25,35 @@ var marker = new mapboxgl.Marker(el)
   .setLngLat([-112.074036, 33.448376])
   .addTo(map);
 
-// MTBA Data Packaging
+// Valley Metro Data Packaging
 
-async function run() {
-    // get bus data    
+var myTimer;
+
+async function run(a) {
+  // Get bus data   
 	const locations = await getBusLocations();
-	const lat = locations.entity[1].vehicle.position.latitude;
-  const long = locations.entity[1].vehicle.position.longitude;
+	const lat = locations.entity[a].vehicle.position.latitude;
+  const long = locations.entity[a].vehicle.position.longitude;
+  // Update marker and map center
   const longLat = [];
   longLat.push(long, lat);
   marker.setLngLat(longLat);
   map.flyTo({'center': longLat, 'zoom': 17});
+  // Under the hood
 	console.log(new Date());
-  console.log('Longitude is: ' + locations.entity[1].vehicle.position.longitude);
-	console.log('Latitude is: ' + locations.entity[1].vehicle.position.latitude);
+  console.log('Longitude is: ' + locations.entity[a].vehicle.position.longitude);
+	console.log('Latitude is: ' + locations.entity[a].vehicle.position.latitude);
 	// timer
-	setTimeout(run, 15000);
+	myTimer = setTimeout(() => {
+    run(a);
+  }, 15000);
+}
+
+// Bus Selector
+
+function busSelector(a) {
+  clearTimeout(myTimer);
+  run(a);
 }
 
 // Request bus data from MBTA
@@ -42,7 +63,4 @@ async function getBusLocations() {
 	const response = await fetch(url);
 	const json     = await response.json();
 	return json;
-
 }
-
-run();

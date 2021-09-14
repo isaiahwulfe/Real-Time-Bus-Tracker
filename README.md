@@ -7,7 +7,7 @@
 
 ### <div align="center">Features</div>
 > - Location updates every 15 seconds
-> - Bus image is the marker for the bus
+> - The bus marker is bus.png
 > - Map stays centered on the bus
 
 ***

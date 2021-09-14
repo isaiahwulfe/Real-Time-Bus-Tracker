@@ -19,4 +19,12 @@
 > 5. Map will automatically zoom in and focus on selected bus
 > 6. Click another button to switch to another bus at anytime
 
+### <div align="center">Future Improvements</div>
+> - Add markers to visually track the last 3 positions of the bus
+> - Link RTVP Vehicle Identity to bus route and display that info above the bus icon
+> - Make routes searchable
+
+### <div align="center">License Information</div>
+> - [MIT License](https://mit-license.org/)
+
 ***

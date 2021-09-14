@@ -41,9 +41,10 @@ async function run(a) {
   map.flyTo({'center': longLat, 'zoom': 17});
   // Under the hood
 	console.log(new Date());
+  console.log('Bus is: ' + locations.entity[a].id);
   console.log('Longitude is: ' + locations.entity[a].vehicle.position.longitude);
 	console.log('Latitude is: ' + locations.entity[a].vehicle.position.latitude);
-	// timer
+	// Timer
 	myTimer = setTimeout(() => {
     run(a);
   }, 15000);
